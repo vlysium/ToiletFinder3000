@@ -6,19 +6,19 @@
 <form method="post" class="create-toilet-form">
 	<label>
 		Toilet name
-		<input type="text" asp-for="NickName">
+		<input type="text" asp-for="NickName" required>
 	</label>
 	<label>
 		Street name
-		<input type="text" asp-for="Street">
+		<input type="text" asp-for="Street" required>
 	</label>
 	<label>
 		Postal code
-		<input type="text" asp-for="PostalCode">
+		<input type="text" asp-for="PostalCode" required>
 	</label>
 	<label>
 		City
-		<input type="text" asp-for="City">
+		<input type="text" asp-for="City" required>
 	</label>
 	<input type="submit" value="Create Toilet">
 </form>
