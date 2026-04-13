@@ -11,12 +11,25 @@
 		@foreach (Toilet toilet in Model.Toilets)
 		{
 		<li>
-			<div class="toilet-card">
+			<a asp-page="/ToiletDetails" asp-route-id="@toilet.Id" class="toilet-card">
 				<h2 class="toilet-card-name">@toilet.NickName</h2>
+				<form method="post" asp-page-handler="AddRating" class="toilet-card-rating-form">
+					<select asp-for="Rating" name="rating">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</form>
 				<address class="toilet-card-address">
-					@toilet.Address.City, @toilet.Address.PostalCode @toilet.Address.City
+					@toilet.Address.Street, @toilet.Address.PostalCode @toilet.Address.City
 				</address>
-			</div>
+				<form method="post" asp-page-handler="Delete" class="toilet-card-delete-form">
+					<input type="hidden" asp-for="Id" value="@toilet.Id">
+					<input type="submit" value="Delete">
+				</form>
+			</a>
 		</li>
 		}
 	</ul>

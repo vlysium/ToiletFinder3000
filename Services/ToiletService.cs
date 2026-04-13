@@ -21,5 +21,10 @@ namespace ToiletFinder3000.Services
 		{
 			_toiletRepository.AddToilet(toilet);
 		}
+
+		public Toilet GetToiletById(string id)
+		{
+			return _toiletRepository.GetToiletById(id);
+		}
 	}
 }

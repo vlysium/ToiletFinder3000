@@ -42,7 +42,14 @@ namespace ToiletFinder3000.Repository
 
 		public Toilet GetToiletById(string id)
 		{
-			throw new NotImplementedException();
+			foreach (Toilet toilet in _toilets)
+			{
+				if (toilet.Id == id)
+				{
+					return toilet;
+				}
+			}
+			return null;
 		}
 
 		public void AddToilet(Toilet toilet)
