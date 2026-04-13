@@ -2,14 +2,22 @@
 @using ToiletFinder3000.Model
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+	ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    @foreach (Toilet toilet in Model.Toilets)
-    {
-        <p>@toilet.NickName</p>
-    }
+<div>
+	<h1>Welcome</h1>
+	<ul class="toilet-list">
+		@foreach (Toilet toilet in Model.Toilets)
+		{
+		<li>
+			<div class="toilet-card">
+				<h2 class="toilet-card-name">@toilet.NickName</h2>
+				<address class="toilet-card-address">
+					@toilet.Address.City, @toilet.Address.PostalCode @toilet.Address.City
+				</address>
+			</div>
+		</li>
+		}
+	</ul>
 </div>

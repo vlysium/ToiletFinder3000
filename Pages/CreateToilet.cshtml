@@ -1,0 +1,24 @@
+﻿@page "/create-toilet"
+@model ToiletFinder3000.Pages.CreateToiletModel
+@{
+}
+
+<form action="" method="post" class="create-toilet-form">
+	<label>
+		Toilet name
+		<input type="text" asp-for="NickName">
+	</label>
+	<label>
+		Street name
+		<input type="text" asp-for="Street">
+	</label>
+	<label>
+		Postal code
+		<input type="text" asp-for="PostalCode">
+	</label>
+	<label>
+		City
+		<input type="text" asp-for="City">
+	</label>
+	<input type="submit" value="Create Toilet">
+</form>
