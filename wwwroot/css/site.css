@@ -20,6 +20,8 @@
   border: 1px solid oklch(0 0 0 / 0.1);
   border-radius: 0.25rem;
   box-shadow: 0 2px 4px oklch(0 0 0 / 0.1);
+  text-decoration: none;
+  color: inherit;
 
   .toilet-card-name {
     margin-bottom: 0;
@@ -27,6 +29,10 @@
 
   .toilet-card-address {
     margin-bottom: 0;
+  }
+
+  &:hover, &:focus-visible {
+    background-color: oklch(0.98 0 0);
   }
 }
 
