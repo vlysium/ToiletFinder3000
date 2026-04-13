@@ -7,7 +7,7 @@ namespace ToiletFinder3000.Pages
 {
     public class ToiletDetailsModel : PageModel
     {
-        public Toilet Toilet { get; set; }
+        public required Toilet Toilet { get; set; }
         private readonly ToiletService _toiletService;
         public ToiletDetailsModel(ToiletService toiletService)
         {

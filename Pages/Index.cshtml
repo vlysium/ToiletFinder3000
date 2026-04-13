@@ -7,6 +7,12 @@
 
 <div>
 	<h1>Welcome</h1>
+
+	<form asp-page-handler="Search" method="post">
+		<input type="text" asp-for="Query" placeholder="Search toilets...">
+		<input type="submit" value="Search">
+	</form>
+
 	<ul class="toilet-list">
 		@foreach (Toilet toilet in Model.Toilets)
 		{
@@ -33,4 +39,5 @@
 		</li>
 		}
 	</ul>
+	
 </div>

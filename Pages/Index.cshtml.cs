@@ -14,9 +14,9 @@ namespace ToiletFinder3000.Pages
 
         [BindProperty]
         public required string Id { get; set; }
-        
+
         [BindProperty]
-        public required double Rating { get; set; }
+        public string Query { get; set; }
 
         public IndexModel(ILogger<IndexModel> logger, ToiletService toiletService)
         {
@@ -27,15 +27,23 @@ namespace ToiletFinder3000.Pages
 
         public void OnGet() { }
 
-        // public void OnPostAddRating()
-        // {
-            
-        // }
-
         public IActionResult OnPostDelete()
         {
             _toiletService.DeleteToilet(Id);
             return Redirect("/");
+        }
+
+        public IActionResult OnPostSearch()
+        {
+            if (string.IsNullOrEmpty(Query))
+            {
+                Toilets = _toiletService.GetAllToilets();
+            }
+            else
+            {
+                Toilets = _toiletService.SearchToilets(Query);
+            }
+            return Page();
         }
     }
 }

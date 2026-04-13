@@ -67,9 +67,17 @@ namespace ToiletFinder3000.Repository
 			throw new NotImplementedException();
 		}
 
-		public Toilet SearchToilet(string query)
+		public List<Toilet> SearchToilets(string query)
 		{
-			throw new NotImplementedException();
+			List<Toilet> results = new List<Toilet>();
+			foreach (Toilet toilet in _toilets)
+			{
+				if (toilet.NickName.ToLower().Contains(query.ToLower()))
+				{
+					results.Add(toilet);
+				}
+			}
+			return results;
 		}
 
 		public void DeleteToilet(string id)

@@ -31,5 +31,10 @@ namespace ToiletFinder3000.Services
 		{
 			_toiletRepository.DeleteToilet(id);
 		}
+
+		public List<Toilet> SearchToilets(string query)
+		{
+			return _toiletRepository.SearchToilets(query);
+		}
 	}
 }

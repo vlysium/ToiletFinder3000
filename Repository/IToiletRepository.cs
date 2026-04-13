@@ -9,7 +9,7 @@ namespace ToiletFinder3000.Repository
 		public void AddToilet(Toilet toilet);
 		public void UpdateToilet(Toilet toilet);
 		public void FindToilet(string id);
-		public Toilet SearchToilet(string query);
+		public List<Toilet> SearchToilets(string query);
 		public void DeleteToilet(string id);
 	}
 }
