@@ -13,7 +13,7 @@
 		<li>
 			<a asp-page="/ToiletDetails" asp-route-id="@toilet.Id" class="toilet-card">
 				<h2 class="toilet-card-name">@toilet.NickName</h2>
-				<form method="post" asp-page-handler="AddRating" class="toilet-card-rating-form">
+				@* <form method="post" asp-page-handler="AddRating" class="toilet-card-rating-form">
 					<select asp-for="Rating" name="rating">
 						<option value="1">1</option>
 						<option value="2">2</option>
@@ -21,7 +21,7 @@
 						<option value="4">4</option>
 						<option value="5">5</option>
 					</select>
-				</form>
+				</form> *@
 				<address class="toilet-card-address">
 					@toilet.Address.Street, @toilet.Address.PostalCode @toilet.Address.City
 				</address>

@@ -33,7 +33,7 @@ namespace ToiletFinder3000.Pages
             Toilet toilet = new Toilet(Guid.NewGuid().ToString(), NickName, address);
             _toiletService.AddToilet(toilet);
 
-            return Redirect("/Index");
+            return Redirect("/");
         }
     }
 }

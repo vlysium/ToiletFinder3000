@@ -49,7 +49,7 @@ namespace ToiletFinder3000.Repository
 					return toilet;
 				}
 			}
-			return null;
+			throw new Exception("Toilet not found");
 		}
 
 		public void AddToilet(Toilet toilet)
@@ -74,7 +74,15 @@ namespace ToiletFinder3000.Repository
 
 		public void DeleteToilet(string id)
 		{
-			throw new NotImplementedException();
+			foreach (Toilet toilet in _toilets)
+			{
+				if (toilet.Id == id)
+				{
+					_toilets.Remove(toilet);
+					return;
+				}
+			}
+			throw new Exception("Toilet not found");
 		}
 	}
 }
