@@ -28,11 +28,11 @@ namespace ToiletFinder3000.Repository
 			_toilets.Add(toilet4);
 
 			Address address5 = new Address("Bredahlsgade 1A", "4200", "Slagelse");
-			Toilet toilet5 = new Toilet(Guid.NewGuid().ToString(), "Goofy Toilet", address5);
+			Toilet toilet5 = new Toilet(Guid.NewGuid().ToString(), "Ohio Toilet", address5);
 			_toilets.Add(toilet5);
 
 			Address address6 = new Address("Anders Larsensvej 7-9", "4300", "Holbæk");
-			Toilet toilet6 = new Toilet(Guid.NewGuid().ToString(), "Bruh Toilet", address6);
+			Toilet toilet6 = new Toilet(Guid.NewGuid().ToString(), "Sigma Toilet", address6);
 			_toilets.Add(toilet6);
 		}
 		public List<Toilet> GetAllToilets()

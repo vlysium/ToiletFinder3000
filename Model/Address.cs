@@ -16,6 +16,11 @@ namespace ToiletFinder3000.Model
 		public double Longitude { get => _longitude; set => _longitude = value; }
 		public double Latitude { get => _latitude; set => _latitude = value; }
 
+		public Address(): this(string.Empty, /* string.Empty, */ string.Empty, string.Empty)
+		{
+			
+		}
+
 		public Address(string street, /* string number, */ string postalCode, string city)
 		{
 			_street = street;
